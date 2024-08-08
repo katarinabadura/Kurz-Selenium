@@ -1,0 +1,91 @@
+{
+  "id": "2040e9e7-c764-40ba-8bed-637ad6c2dec3",
+  "version": "2.0",
+  "name": "P02_prikazy",
+  "url": "https://www.google.sk",
+  "tests": [{
+    "id": "6da7259c-1c56-4764-9328-62589b4d5ed0",
+    "name": "TC_001_otvaranie_stranko",
+    "commands": [{
+      "id": "d95cc26f-8f79-470a-ab2b-3093ce926876",
+      "comment": "",
+      "command": "open",
+      "target": "https://google.sk/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f42afbde-1844-43ab-b970-166ea39c4e88",
+      "comment": "",
+      "command": "open",
+      "target": "https://facebook.sk/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fbbfc2cd-28c2-4753-adbd-051f27161f8d",
+      "comment": "",
+      "command": "open",
+      "target": "https://alza.sk/",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "c44cf6b1-3713-4136-b6ee-ebc3f5b70833",
+    "name": "TC_002_cakanie_element",
+    "commands": [{
+      "id": "771fffef-dfed-457e-a581-da37ef802749",
+      "comment": "",
+      "command": "open",
+      "target": "https://facebook.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7c8b8027-5ce5-428d-9b1b-fb574295e62d",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.fb_logo",
+      "targets": [
+        ["css=.fb_logo", "css:finder"],
+        ["xpath=//img[@alt='Facebook']", "xpath:img"],
+        ["xpath=//div[@id='content']/div/div/div/div/div/img", "xpath:idRelative"],
+        ["xpath=//div/div/div/img", "xpath:position"]
+      ],
+      "value": "3000"
+    }, {
+      "id": "eb79fa36-1d3c-4245-9b6d-f1dc2db89c86",
+      "comment": "",
+      "command": "open",
+      "target": "htttps://slovensko.sk/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "18983a52-00fa-469e-b4d3-8d8e9c252583",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=#logo > img",
+      "targets": [
+        ["css=#logo > img", "css:finder"],
+        ["xpath=//img[@alt='Ústredný portál verejných služieb ľuďom']", "xpath:img"],
+        ["xpath=//a[@id='logo']/img", "xpath:idRelative"],
+        ["xpath=//a/img", "xpath:position"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "ecac0488-9699-4e0c-9716-cc214d75c19c",
+      "comment": "",
+      "command": "echo",
+      "target": "test uspesny",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "7ed49733-63aa-42af-9243-8402ab7d1f5b",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["6da7259c-1c56-4764-9328-62589b4d5ed0"]
+  }],
+  "urls": ["https://www.google.sk/"],
+  "plugins": []
+}
